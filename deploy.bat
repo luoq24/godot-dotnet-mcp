@@ -9,7 +9,8 @@ REM 用法：双击运行或在终端中执行
 REM ==========================================
 
 REM ===== 请修改为目标 Godot 项目路径 =====
-set TARGET_PROJECT=J:\Godot_Projects\forage-1\forage-demo
+REM set TARGET_PROJECT=J:\Godot_Projects\forage-1\forage-demo
+set TARGET_PROJECT=E:\godot_space\forage_1\forage-demo
 REM ==========================================
 
 set SOURCE_ADDON=%~dp0addons\godot_dotnet_mcp

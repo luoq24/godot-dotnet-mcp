@@ -84,7 +84,8 @@ Godot 编辑器中存在**三种完全不同的错误来源**，MCP 工具对它
 #### 步骤 1：读取 Godot 日志文件（最可靠，优先）
 Godot 引擎原生将所有运行时错误写入日志文件，不依赖任何插件状态。
 路径规律：
-- Windows: `%APPDATA%/Godot/app_userdata/<project_name>/logs/godot.log`
+- 优先使用 Godot 的虚拟路径：`user://logs/godot.log`
+- Windows 磁盘路径：`%APPDATA%/Godot/app_userdata/<project_name>/logs/godot.log`
 - 项目目录下也可能存在日志
 
 可以通过 `system_project_files` 读取：

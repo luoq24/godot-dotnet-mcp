@@ -9,15 +9,16 @@ description: "Provides guidelines for modifying the godot-dotnet-mcp project to 
 
 ## 项目结构
 
-- **源代码位置**: `d:\Pycharm_Files\godot-dotnet-mcp\addons\godot_dotnet_mcp\`
-- **部署目标**: 通过 `deploy.bat` 部署到目标 Godot 项目（默认 `J:\Godot_Projects\forage-1\forage-demo`）
-- **部署脚本**: `d:\Pycharm_Files\godot-dotnet-mcp\deploy.bat`
+- **项目根目录**: 当前工作区中的 `godot-dotnet-mcp` 仓库根目录
+- **源代码位置**: `<godot-dotnet-mcp>/addons/godot_dotnet_mcp/`
+- **部署目标**: 通过 `deploy.bat` 部署到目标 Godot 项目；目标路径以脚本配置或用户当前环境为准
+- **部署脚本**: `<godot-dotnet-mcp>/deploy.bat`
 
 ## 修改代码后的标准流程
 
 ### AI 执行的步骤
 #### 1. 修改源代码
-在 `d:\Pycharm_Files\godot-dotnet-mcp\` 下修改源文件。
+在当前工作区的 `godot-dotnet-mcp` 仓库下修改源文件。
 ### 用户手动执行的步骤
 > **注意**：以下步骤需要用户手动操作，AI 无法直接完成。
 #### 2. 运行 deploy.bat 部署
@@ -82,8 +83,8 @@ description: "Provides guidelines for modifying the godot-dotnet-mcp project to 
 
 ### 验证文件已正确部署
 ```powershell
-# 检查目标项目中是否包含非法代码
-Select-String -Path "J:\Godot_Projects\forage-1\forage-demo\addons\godot_dotnet_mcp\plugin\runtime\*.gd" -Pattern "if not _.*:"
+# 将 <target-godot-project> 替换为当前目标 Godot 项目路径
+Select-String -Path "<target-godot-project>\addons\godot_dotnet_mcp\plugin\runtime\*.gd" -Pattern "if not _.*:"
 ```
 
 ### 检查 Godot 编译缓存
